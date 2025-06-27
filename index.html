@@ -1701,7 +1701,8 @@ const studentDatabase = {
             
             // Search function
             function searchStudent() {
-                const query = searchInput.value.trim();
+                const query = document.getElementById('studentNumber').value.trim();
+                const student = studentDatabase[query];
                 
                 if (!query) {
                     showError("TRAINER ID REQUIRED. PLEASE INPUT VALID CREDENTIALS.");
